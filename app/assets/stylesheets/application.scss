@@ -2,18 +2,62 @@
  *= require font-kit-rails/open-sans
 */
 
-@import "bootstrap";
-@import "font-awesome";
-@import "col-helpers";
-@import "nav";
-@import "events";
-@import "tickets";
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'col-helpers';
+@import 'nav';
+@import 'events';
+@import 'tickets';
 
-body {
-  font-family: 'Open Sans';
+body
+{
+    font-family: 'Open Sans';
 }
-.btn.btn-danger {
-  background-color: rgb(216, 87, 66);
-  border: 2px solid rgb(241, 112, 91);
+.btn.btn-danger
+{
+    border: 2px solid rgb(241, 112, 91);
+    background-color: rgb(216, 87, 66);
 }
 
+/*flash*/
+.alert-error
+{
+    text-align: left;
+
+    color: #b94a48;
+    border-color: #eed3d7;
+    background-color: #f2dede;
+}
+
+.alert-alert
+{
+    text-align: left;
+
+    color: #b94a48;
+    border-color: #eed3d7;
+    background-color: #f2dede;
+}
+
+.alert-success
+{
+    text-align: left;
+
+    color: #468847;
+    border-color: #d6e9c6;
+    background-color: #dff0d8;
+}
+
+.alert-notice
+{
+    text-align: left;
+
+    color: #468847;
+    border-color: #d6e9c6;
+    background-color: #dff0d8;
+}
+
+.img-event {
+    position: relative;
+    width: 100%;
+    height: auto;
+}

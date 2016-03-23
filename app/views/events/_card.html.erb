@@ -1,12 +1,13 @@
 <div class="col-md-6">
-  <%= link_to event_path(event) do %>
+  <%= link_to event_path(obj) do %>
     <div class="card">
-      <img class="card-img-top" src="<%= event.hero_image_url %>">
+      <img class="card-img-top img-fluid" src="<%= obj.hero_image_url %>">
       <div class="card-block">
-        <h4 class="card-title"><%= event.name %></h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+        <h4 class="card-title"><%= obj.name %></h4>
+        <p class="card-text">
+          <%= truncate(obj.extended_html_description.html_safe, length: 50) %>
         </p>
       </div>
     </div>
   <% end %>
-</div>  
+</div>

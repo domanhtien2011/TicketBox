@@ -1,0 +1,8 @@
+<%= render 'shared/errors', obj: @ticket_type, name: 'ticket type'  %>
+<h1 class="text-sm-center">Ticket Type for Your Event</h1>
+<%= simple_form_for [@event, @ticket_type] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :max_quantity %>
+  <%= f.button :submit %>
+<% end %>

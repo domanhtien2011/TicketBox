@@ -1,0 +1,12 @@
+<%= render 'shared/errors', obj: @event, name: 'event' %>
+<%= simple_form_for(@event) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :extended_html_description %>
+  <%= f.input :hero_image_url %>
+  <%= f.input :starts_at %>
+  <%= f.input :ends_at %>
+  <%= f.association :venue %>
+  <%= f.association :category %>
+
+  <%= f.button :submit %>
+<% end %>
