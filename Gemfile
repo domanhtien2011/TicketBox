@@ -39,6 +39,7 @@ end
 gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem 'rspec-rails'
   gem 'spring'
   gem 'factory_girl_rails'
@@ -58,3 +59,5 @@ source 'https://rails-assets.org' do
 end
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'faker'
+gem 'shoulda-matchers', require: false

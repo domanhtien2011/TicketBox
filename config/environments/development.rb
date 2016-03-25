@@ -7,6 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # Do not eager load code on boot.
+  config.serve_static_files = false
   config.eager_load = false
 
   # Show full error reports and disable caching.
@@ -39,5 +40,4 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
 end
