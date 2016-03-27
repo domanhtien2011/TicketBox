@@ -3,7 +3,7 @@ module EventsHelper
     "https://az810058.vo.msecnd.net/site/global/Content/img/home-search-bg-0#{rand(6)}.jpg"
   end
 
-   def check_event_validation(event)
-     true if event.ends_at > Date.today
+  def check_event_validation(event)
+    true if event.starts_at > Time.now
   end
 end

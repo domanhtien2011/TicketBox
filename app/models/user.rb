@@ -4,13 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
-  validate :validate_username
+  # validate :validate_username
+
+  validates_uniqueness_of :username
 
   has_many :events
-
-  def validate_username
-    if User.where(email: username).exists?
-      errors.add(:username, :invalid)
-    end
-  end
 end

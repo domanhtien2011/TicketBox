@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
   belongs_to :venue
   belongs_to :category
   has_many :ticket_types
+  has_many :tickets
 
   validates_associated :ticket_types
   validates_presence_of :user

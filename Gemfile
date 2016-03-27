@@ -42,7 +42,7 @@ group :development, :test do
   gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem 'rspec-rails'
   gem 'spring'
-  gem 'factory_girl_rails'
+
   gem 'capybara'
   gem 'guard-rspec'
   gem 'spring-commands-rspec'
@@ -50,6 +50,7 @@ group :development, :test do
 end
 
 group :test do
+   gem 'factory_girl_rails', :require => false
   gem 'webmock'
 end
 
