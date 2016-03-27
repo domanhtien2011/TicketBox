@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
+  before do
+    user = create(:user)
+    @event1 = create(:event, name: 'Rails conference', starts_at: Faker::Time.backward(7, :day), user: user)
+    @event2 = create(:event, extended_html_description: 'rails developer', starts_at: Faker::Time.forward(14, :evening), user: user )
+  end
 
   describe 'validations' do
     it { should validate_presence_of(:name) }
@@ -19,5 +24,18 @@ RSpec.describe Event, type: :model do
 
     it { should belong_to(:venue) }
     it { should belong_to(:category) }
+  end
+
+  describe 'return coming events only' do
+    it 'test the class event_check_validation method' do
+      expect(Event.check_event_validation).to match_array([@event2])
+    end
+  end
+
+  describe 'return events that have names or description in the search string' do
+    it 'test the class search method' do
+      string = 'vietnam'
+      expect(Event.search(string)).to eq([])
+    end
   end
 end

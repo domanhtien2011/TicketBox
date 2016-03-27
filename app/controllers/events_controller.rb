@@ -2,9 +2,13 @@ class EventsController < ApplicationController
 
   before_action :authenticate_user!, except: [:show, :index]
 
-
   def index
-    @events = Event.all
+    @search = params[:search] ? params[:search].strip : ''
+    if @search.empty?
+      @events = Event.check_event_validation
+    else
+       @events = Event.check_event_validation.search(@search)
+     end
   end
 
   def user_events

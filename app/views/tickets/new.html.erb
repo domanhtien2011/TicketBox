@@ -44,12 +44,15 @@
 </div>
 
 <%= form_tag('/ticket/finish') do %>
-<% @event.ticket_types.each do |ticket_type| %>
-  <tr>
-    <td><%= ticket_type.name %></td>
-    <td> <%= number_to_currency(ticket_type.price, unit: 'VND ', precision: 0) %></td>
-    <td> <%= select_tag(:quantity, options_for_select(0..10)) %></td>
-  </tr>
-  <br>
+  <% @event.ticket_types.each do |ticket_type| %>
+    <tr>
+      <td><%= ticket_type.name %></td>
+      <td> <%= number_to_currency(ticket_type.price, unit: 'VND ', precision: 0) %></td>
+      <td> <%= select_tag(:quantity, options_for_select(0..10)) %></td>
+    </tr>
+    <br>
   <% end %>
+  <p>
+    <%= submit_tag 'Purchase Ticket',  class: 'btn btn-primary' %>
+  </p>
 <% end %>

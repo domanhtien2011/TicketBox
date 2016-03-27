@@ -5,7 +5,11 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new
   end
 
-  def create
+  def purchase
+
+  end
+
+  def finish
 
   end
 end

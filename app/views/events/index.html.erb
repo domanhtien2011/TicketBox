@@ -2,8 +2,8 @@
   <h1 class="text-sm-center">Welcome to Ticket Box</h1>
   <div class="container">
     <h2> Discover upcoming events </h2>
-    <form>
-      <input type="text" class="form-control" name="search" placeholder="Search for events, shows, courses...">
+    <form action="<%= root_path %>" method="get">
+      <input type="text" class="form-control" name="search" placeholder="Search for events, shows, courses..." value="<%= @search %>">
     </form>
   </div>
 </div>

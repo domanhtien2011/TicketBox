@@ -1,16 +1,10 @@
 FactoryGirl.define do
-  factory :ticket do
-    
-  end
   sequence :email do |n|
     "person#{n}@example.com"
   end
 end
 
 FactoryGirl.define do
-  factory :ticket do
-    
-  end
   factory :user, :class => 'User' do
     email
     username 'Somebody'
@@ -20,9 +14,6 @@ FactoryGirl.define do
 end
 
 FactoryGirl.define do
-  factory :ticket do
-    
-  end
   factory :event, :class => 'Event' do
     name 'Rails Conference'
     extended_html_description 'The best conference for Rails developers in VN'

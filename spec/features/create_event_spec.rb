@@ -30,12 +30,5 @@ feature "AddNewEvents", :type => :feature do
     end
 
     expect(page).to have_content('Event has been created succesfully')
-
-    # it "should create an event" do
-
-    #   expect { click_button "Create Event" }.to change(Event, :event).by(1)
-
-      # expect( Event.first.name).to eq( "Rails Event")
-    # end
   end
 end

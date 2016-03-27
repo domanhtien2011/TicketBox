@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     resources :tickets
   end
 
-  post '/ticket/finish', to: 'tickets#create'
+  post '/ticket/purchase', to: 'tickets#purchase'
+
+  get 'ticket/finish', to: 'tickets#finish'
 
   resources :events do
     resources :ticket_types
