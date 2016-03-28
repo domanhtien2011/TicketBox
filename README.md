@@ -64,6 +64,9 @@ The following **required** functionality is complete:
 Here is the video walkthroughs of implemented user stories:
 > `![Video Walkthrough](https://github.com/domanhtien2011/TicketBox/blob/master/Walkthrough.gif)`
 
+![Video Walkthrough]()
+GIF created with [Byzanz](https://github.com/GNOME/byzanz)
+
 ## License
 
     Copyright [2016] [Tien Manh Do]
