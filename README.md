@@ -57,7 +57,7 @@ The following **required** functionality is complete:
 
 *I believe that my test coverage for the event model is 100%, I don't know why it complains that I haven't tested the methods in the event.rb file.*
 
-**The most difficult obstacble for this assignment is I couldn't figure out a way to allow the user to purchase a ticket. I think I am confused about the ticket and ticket_type controllers. Particularly, how can I pass all the values from new ticket page to the ticket controller because obviously there is no relationship between ticket_types and ticket. In addition, I tried to create a relationship between them, but it still doesn't work. Hopefully, after grading my assignment, you can give me a suggestion for this feature.**
+**The most difficult obstacle for this assignment is I couldn't figure out a way to allow the user to purchase a ticket. I think I am confused about the ticket and ticket_type controllers. Particularly, how can I pass all the values from new ticket page to the ticket controller because obviously there is no relationship between ticket_types and ticket. In addition, I tried to create a relationship between them, but it still doesn't work. Hopefully, after grading my assignment, you can give me a suggestion for this feature.**
 
 ## Video Walkthrough
 
