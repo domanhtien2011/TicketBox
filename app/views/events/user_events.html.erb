@@ -1,4 +1,6 @@
 <h1 class="text-sm-center">Events Created by You</h1>
-<% @events.each do |event| %>
-  <h3 class="text-sm-center"><%= link_to event.name, event %></h3>
-<% end %>
+<div class="container-fluid events-list">
+  <% @events.each do |event| %>
+    <%= render 'card', obj:event %>
+  <% end %>
+</div>
