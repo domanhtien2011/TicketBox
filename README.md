@@ -8,7 +8,7 @@ Time spent: **23** hours
 
 URL: **https://shielded-peak-56294.herokuapp.com/**
 
-SimpleCov Test Coverage: **Insert percentage or link to report here**
+SimpleCov Test Coverage: **82.14%**
 
 ## User Stories
 
