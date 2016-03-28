@@ -62,7 +62,7 @@ The following **required** functionality is complete:
 ## Video Walkthrough
 
 Here is the video walkthroughs of implemented user stories:
-> `![Video Walkthrough](https://github.com/domanhtien2011/chatty/blob/master/Walkthrough1.gif)`
+> `![Video Walkthrough](https://github.com/domanhtien2011/TicketBox/blob/master/Walkthrough.gif)`
 
 ## License
 
