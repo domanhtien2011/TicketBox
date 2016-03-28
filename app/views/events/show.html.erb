@@ -39,7 +39,9 @@
   <h1 class="text-sm-center" style="color: orange;">You may want to join the following events</h1>
   <br>
   <% @events_in_the_same_region.each do |event| %>
-    <%= render 'card', obj:event %>
+    <% if event.id != @event.id %>
+      <%= render 'card', obj:event %>
+    <% end %>
   <% end %>
 </div>
 
