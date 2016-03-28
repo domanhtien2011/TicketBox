@@ -4,7 +4,7 @@
 
 Submitted by: **Tien Manh Do**
 
-Time spent: **25** hours
+Time spent: **26** hours
 
 URL: **https://shielded-peak-56294.herokuapp.com/**
 
@@ -47,7 +47,7 @@ The following **required** functionality is complete:
 
 * [ ] Users can log in with Facebook.
 * [ ] Users receive an email when they have purchased a ticket.
-* [ ] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
+* [x] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
 * [ ] User A can allow User B to edit User A's event. In other words, an event owner can assign other people to be "event admins". 
 * [ ] Ticket types have an optional "minimum" purchase quantity. ([Example Screenshot](http://i.imgur.com/DOYtAR0.png))
 * [ ] Events are automatically labeled as "Hot". "Hot" events should have a red border or some sort of visual flourish. The event title should also be prefixed with "**HOT:**".
