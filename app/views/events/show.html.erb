@@ -41,6 +41,8 @@
   <% @events.each do |event| %>
     <% if event.venue.region == @event.venue.region %>
       <%= render 'card', obj:event %>
+    <% else %>
+      <h3>We are adding more related events in the near future. Look forward to it.</h3>
     <% end %>
   <% end %>
 </div>
