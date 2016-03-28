@@ -38,8 +38,8 @@
 <div class="container-fluid events-list">
   <h1 class="text-sm-center" style="color: orange;">You may want to join the following events</h1>
   <br>
-  <% if @events_in_the_same_region.empty? %>
-  <h3>We are adding more related events in the near future. Please check it back later.</h3>
+  <% if @events_in_the_same_region.count == 1 %>
+    <h3 class="text-sm-center" style="color: green;">We are adding more related events in the near future. Please check it back later.</h3>
   <% else %>
     <% @events_in_the_same_region.each do |event| %>
       <% if event.id != @event.id %>
