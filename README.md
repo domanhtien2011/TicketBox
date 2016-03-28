@@ -4,7 +4,7 @@
 
 Submitted by: **Tien Manh Do**
 
-Time spent: **26** hours
+Time spent: **27** hours
 
 URL: **https://shielded-peak-56294.herokuapp.com/**
 
