@@ -8,8 +8,8 @@ class EventsController < ApplicationController
     if @search.empty?
       @events = Event.check_event_validation
     else
-       @events = Event.check_event_validation.search(@search)
-     end
+      @events = Event.check_event_validation.search(@search)
+    end
   end
 
   def user_events
@@ -22,6 +22,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @events = Event.check_event_validation.where(["category_id = ? and id != ?", @event.category_id, @event.id])
     if !(user_signed_in? && current_user.id == @event.user_id)
       if !@event.has_ticket_types?
         flash[:danger] = 'We are sorry, this event is not ready yet!'
@@ -32,12 +33,12 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.build(event_params)
-      if @event.save
-        flash[:success] = 'Event has been created succesfully'
-        redirect_to(new_event_ticket_type_path(@event))
-      else
-        render 'new'
-      end
+    if @event.save
+      flash[:success] = 'Event has been created succesfully'
+      redirect_to(new_event_ticket_type_path(@event))
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -57,7 +58,7 @@ class EventsController < ApplicationController
 
   private
 
-    def event_params
-      params.require(:event).permit(:starts_at, :ends_at, :hero_image_url, :extended_html_description, :name, :venue_id, :category_id, :user_id)
-    end
+  def event_params
+    params.require(:event).permit(:starts_at, :ends_at, :hero_image_url, :extended_html_description, :name, :venue_id, :category_id, :user_id)
+  end
 end

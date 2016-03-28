@@ -33,6 +33,14 @@
     <% end %>
   </div>
 </div>
+<hr>
 
+<div class="container-fluid events-list">
+  <% @events.each do |event| %>
+    <% if event.venue.region == @event.venue.region %>
+      <%= render 'card', obj:event %>
+    <% end %>
+  <% end %>
+</div>
 
 
