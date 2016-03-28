@@ -1,12 +1,12 @@
-# Homework 3 - *Name of App*
+# Homework 3 - *Coder Ticket*
 
-**Name of your app** is a Ruby on Rails blog application that allows users to create and buy tickets to cool events. 
+**shielded-peak-56294** is a Ruby on Rails blog application that allows users to create and buy tickets to cool events. 
 
-Submitted by: **Your Name Here**
+Submitted by: **Tien Manh Do**
 
-Time spent: **X** hours
+Time spent: **23** hours
 
-URL: **Insert your Heroku URL here**
+URL: **https://shielded-peak-56294.herokuapp.com/**
 
 SimpleCov Test Coverage: **Insert percentage or link to report here**
 
@@ -14,14 +14,14 @@ SimpleCov Test Coverage: **Insert percentage or link to report here**
 
 The following **required** functionality is complete:
 
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 #### Events
 
-* [ ] Users can see a list of upcoming events. Past events should not be shown. **HINT**: Good candidate for a test.
-* [ ] Users can search for events from the homepage.
-* [ ] Users can click on an event to see details about the event. 
-* [ ] Users can click on "Book Now" to go to a page to purchase tickets.
+* [x] Users can see a list of upcoming events. Past events should not be shown. **HINT**: Good candidate for a test.
+* [x] Users can search for events from the homepage.
+* [x] Users can click on an event to see details about the event. 
+* [x] Users can click on "Book Now" to go to a page to purchase tickets.
 
 #### Tickets
 
@@ -29,19 +29,19 @@ The following **required** functionality is complete:
 * [ ] Users can buy tickets to an event, choose the types of tickets, and the quantity of tickets.
 * [ ] Users cannot buy more tickets than the quantity available.
 * [ ] Users can only buy up to 10 of a ticket type at a time.
-* [ ] Users cannot buy tickets to events that occur in the past. 
+* [x] Users cannot buy tickets to events that occur in the past. 
 
 #### Users
 
-* [ ] User can sign up by providing their email, password, and name. 
-* [ ] User can login using an email and password. 
-* [ ] Users can create events. 
-* [ ] Users must click "publish event" before an event becomes viewable to other users. 
-* [ ] Users can create ticket types for that event. 
-* [ ] Users can create venues.
-* [ ] An event must have at least one `ticket_type` defined before it can be published. 
-* [ ] User can see a list of events he or she has created.
-* [ ] Users can edit their event after creation. But only the user who created the event can edit the event. 
+* [x] User can sign up by providing their email, password, and name. 
+* [x] User can login using an email and password. 
+* [x] Users can create events. 
+* [x] Users must click "publish event" before an event becomes viewable to other users. 
+* [x] Users can create ticket types for that event. 
+* [x] Users can create venues.
+* [x] An event must have at least one `ticket_type` defined before it can be published. 
+* [x] User can see a list of events he or she has created.
+* [x] Users can edit their event after creation. But only the user who created the event can edit the event. 
 
 ### Optional Stories
 
@@ -55,11 +55,18 @@ The following **required** functionality is complete:
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+*I believe that my test coverage for the event model is 100%, I don't know why it complains that I haven't tested the methods in the event.rb file.*
+
+**The most difficult obstacble for this assignment is I couldn't figure out a way to allow the user to purchase a ticket. I think I am confused about the ticket and ticket_type controllers. Particularly, how can I pass all the values from new ticket page to the ticket controller because obviously there is no relationship between ticket_types and ticket. In addition, I tried to create a relationship between them, but it still doesn't work. Hopefully, after grading my assignment, you can give me a suggestion for this feature.**
+
+## Video Walkthrough
+
+Here are 2 video walkthroughs of implemented user stories:
+> `![Video Walkthrough](https://github.com/domanhtien2011/chatty/blob/master/Walkthrough1.gif)`
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [Tien Manh Do]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
