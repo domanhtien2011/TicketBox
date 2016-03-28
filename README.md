@@ -61,7 +61,7 @@ The following **required** functionality is complete:
 
 ## Video Walkthrough
 
-Here are 2 video walkthroughs of implemented user stories:
+Here is the video walkthroughs of implemented user stories:
 > `![Video Walkthrough](https://github.com/domanhtien2011/chatty/blob/master/Walkthrough1.gif)`
 
 ## License
