@@ -1,0 +1,5 @@
+<h1 class="text-sm-center">Thank you for purchasing our ticket</h1>
+<% @event.ticket_types.each do |t| %>
+  <p>Ticket type: <%= t.name %></p>
+  <p>Quantity: <%= t.quantity %></p>
+<% end %>

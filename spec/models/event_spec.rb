@@ -38,4 +38,10 @@ RSpec.describe Event, type: :model do
       expect(Event.search(string)).to eq([])
     end
   end
+
+  describe 'test whether an event has a ticket type or not' do
+    it 'test the instance has_ticket_types? method' do
+      expect(@event1.has_ticket_types?).to eq(false)
+    end
+  end
 end

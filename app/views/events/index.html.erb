@@ -10,7 +10,7 @@
 <div class="container-fluid events-list">
 
   <% @events.each do |event| %>
-    <% if check_event_validation(event) %>
+    <% if check_event_validation?(event) %>
       <%= render 'card', obj:event %>
     <% end %>
   <% end %>

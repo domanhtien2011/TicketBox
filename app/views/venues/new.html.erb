@@ -1,0 +1,9 @@
+<h1 class="text-sm-center">Create A Venue for Event</h1>
+<%= render 'shared/errors', obj: @venue %>
+<%= simple_form_for @venue do |f| %>
+  <%= f.input :name %>
+  <%= f.input :full_address %>
+  <%= f.association :region %>
+  <%= f.submit 'Create Venue', class: "btn btn-primary" %>
+<% end %>
+

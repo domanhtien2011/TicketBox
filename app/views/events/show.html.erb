@@ -21,15 +21,15 @@
        <% end %>
     </p>
     <hr>
-    <% if check_event_validation(@event) %>
+    <% if check_event_validation?(@event) %>
       <%= link_to "Book Ticket Now", new_event_ticket_path(@event), class: "btn btn-warning" %>
     <% else %>
       <h3 style="color: red;">Sorry, this event expired.</h3>
       <br>
     <% end %>
 
-    <% if user_signed_in? &&current_user.id == @event.user_id %>
-           <%= link_to "Edit Event", edit_event_path(@event), class: "btn btn-primary" %>
+    <% if same_user?(@event) %>
+      <%= link_to "Edit Event", edit_event_path(@event), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

@@ -6,10 +6,11 @@ class TicketsController < ApplicationController
   end
 
   def purchase
-
+    params[:quantity]
+    redirect_to ticket_finish_path
   end
 
   def finish
-
+    @event = Event.find(params[:event_id])
   end
 end

@@ -4,17 +4,17 @@ Rails.application.routes.draw do
 
   get '/yourevents', to: 'events#user_events'
 
-  resources :events do
-    resources :tickets
-  end
-
   post '/ticket/purchase', to: 'tickets#purchase'
 
-  get 'ticket/finish', to: 'tickets#finish'
+  get '/ticket/finish', to: 'tickets#finish'
 
-  resources :events do
+  resources :events,  except: :destroy do
+    resources :tickets, except: :edit
+  end
+
+  resources :events, except: :destroy do
     resources :ticket_types
   end
 
-  resources :venues
+  resources :venues, only: [:new, :create]
 end

@@ -43,7 +43,7 @@
   </div>
 </div>
 
-<%= form_tag('/ticket/finish') do %>
+<%= form_tag('/ticket/purchase') do %>
   <% @event.ticket_types.each do |ticket_type| %>
     <tr>
       <td><%= ticket_type.name %></td>
