@@ -22,7 +22,10 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @events = Event.check_event_validation.where(["category_id = ? and id != ?", @event.category_id, @event.id])
+    @events_in_the_same_region = Event.joins(:venue).where(
+      events: { category_id: @event.category_id },
+      venues: { region_id: @event.venue.region }
+    )
     if !(user_signed_in? && current_user.id == @event.user_id)
       if !@event.has_ticket_types?
         flash[:danger] = 'We are sorry, this event is not ready yet!'

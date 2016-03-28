@@ -38,12 +38,8 @@
 <div class="container-fluid events-list">
   <h1 class="text-sm-center" style="color: orange;">You may want to join the following events</h1>
   <br>
-  <% @events.each do |event| %>
-    <% if event.venue.region == @event.venue.region %>
-      <%= render 'card', obj:event %>
-    <% else %>
-      <h3>We are adding more related events in the near future. Look forward to it.</h3>
-    <% end %>
+  <% @events_in_the_same_region.each do |event| %>
+    <%= render 'card', obj:event %>
   <% end %>
 </div>
 
