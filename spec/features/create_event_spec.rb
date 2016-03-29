@@ -21,7 +21,6 @@ feature "AddNewEvents", :type => :feature do
       select_date_and_time(DateTime.now, from:'event_starts_at')
       select_date_and_time(DateTime.now, from:'event_ends_at')
 
-
       find("#event_venue_id").click
 
       find("#event_category_id").click

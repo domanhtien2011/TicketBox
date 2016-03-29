@@ -42,7 +42,7 @@
     <h3 class="text-sm-center" style="color: green;">We are adding more related events in the near future. Please check it back later.</h3>
   <% else %>
     <% @events_in_the_same_region.each do |event| %>
-      <% if event.id != @event.id %>
+      <% if event.id != @event.id && check_event_validation?(event) %>
         <%= render 'card', obj:event %>
       <% end %>
     <% end %>
